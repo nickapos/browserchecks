@@ -8,7 +8,7 @@ makeAndKillBrowsers() {
      #echo $a
      a=`expr $a + 1`
      echo "opening browser $a"
-     lynx  http://google.com
+     firefox  http://google.com
 
      getAndKillRunningBrowserPids
   done
@@ -17,7 +17,7 @@ makeAndKillBrowsers() {
 
 getAndKillRunningBrowserPids() {
   echo "preparing to kill all browser processes"
-  pids=$(pgrep lynx)
+  pids=$(pgrep firefox)
   echo $pids
   for i in $pids
   do
